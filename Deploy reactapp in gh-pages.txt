@@ -1,0 +1,24 @@
+Deploy react app in gh-pages:
+
+in package.json file set the homepage url to 
+"homepage": "https://vivekmanavalan.github.io/CovidTracker/,
+
+like above 
+
+and then install 
+
+npm install gh-pages
+
+and then instead of existing scripts add the below or edit like below
+
+"scripts": {
+    "start": "node scripts/start.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
+  },
+
+then finally run the below command
+
+npm run deploy  (not sure of this command)

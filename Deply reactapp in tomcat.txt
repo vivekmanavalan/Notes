@@ -1,0 +1,31 @@
+DEPLOY REACT IN TOMCAT:
+
+Step 1: Open Package.json file
+
+Step 2: add a homepage property like below
+		"homepage" : "./",
+		
+
+Step 3: Then in App.js or anywhere the <Router< tag is used add basename property like below
+		
+		<Router basename="/myApp">  (note: that name "myApp" can be anything xyz also)
+
+
+Step 4: create build using the command npm run build
+		
+Step 5: create a .htaccess file in side the build folder add the below lines in the .htaccess file
+		
+		RewriteEngine on
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule . /index.html [L]
+		
+		
+Step 6: Go to tomcat webapps folder and create a folder with the same as basename (ex myApp here ) now tomcat will automatically
+		consider the basename file as landing page.
+		
+Step 7: Paste all the files from the build folder inside the newly created folder (ex: myApp)
+
+Step 8: Inside tomcat goto conf folder and check the port number from the server.xml file
+
+Step 9: Start the tomcat and use the port number to access the application

@@ -1,0 +1,37 @@
+Deploy React app in netlify:
+
+Reference : https://dev.to/easybuoy/deploying-react-app-from-github-to-netlify-3a9j
+
+
+
+First make sure you have github desktop it is easy without this also you can push using git bash
+
+
+Then after creating a repo in github move the files there.
+
+
+Open https://apps.netlify.com
+
+
+login using the github account
+
+click newsite from git button in the right side 
+
+and select github from the option
+
+and then select the repo which you need to publish
+
+
+note: don't include double quotes for below
+
+
+in the build command button type the command "npm run deploy"
+
+in the publish directory field type "build/"  
+
+then click deploy site button 
+
+
+make sure you don't have warnings in the site.
+
+
